@@ -1,0 +1,46 @@
+﻿@model PassionProject_RecipeBookApp_AkshayaDupati.Models.Recipe
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<style>
+    .main {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 40px 20px;
+        border-radius: 5px;
+    }
+    h2 {
+        margin-bottom: 10px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+    input[type="submit"] {
+        text-align: center;
+        margin: auto;
+        background-color: mediumseagreen;
+        padding: 10px 30px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    h3,p,form{
+        text-align: center;
+    }
+</style>
+<div class="main">
+    <h2>Are you sure you want to delete this recipe?</h2>
+
+    <h3>@Model.RecipeName</h3>
+    <p>@Model.RecipeDescription</p>
+    <form action="/Recipe/Delete/@Model.RecipeID" method="POST">
+        <input type="submit" value="Confirm Delete" />
+    </form>
+</div>

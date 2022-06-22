@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+<style>
+    .main {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 40px 20px;
+        border-radius: 5px;
+    }
+    h2 {
+        margin-bottom: 10px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 40px;
+        width: 50%;
+        margin: auto;
+    }
+    h2,form,input,label{
+        text-align: center;
+        padding: 10px;
+    }
+    input[type="text"]{
+        margin: 0 auto;
+    }
+    label, input{
+        display: block;
+    }
+    textarea{
+        width: 100%;
+        height:auto;
+        overflow: auto;
+    }
+    input[type="submit"]{
+        text-align: center;
+        margin: auto;
+        background-color: mediumseagreen;
+        padding: 10px 30px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    button {
+        text-align: center;
+        margin: auto;
+        background-color: mediumseagreen;
+        padding: 10px 30px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .add-link {
+        color: black;
+        padding: 20px 0px;
+        margin: 20px 0px;
+    }
+</style>
+<div class="main">
+    <h2>Create Recipe</h2>
+    <form action="/Recipe/Create" method="POST">
+        <div>
+            <label for="recipename">Recipe Name: </label>
+            <input type="text" id="recipename" name="RecipeName" />
+        </div>
+        <div>
+            <label for="recipedescription">Recipe Description: </label>
+            <textarea rows="10" cols="30" id="recipedescription" name="RecipeDescription"></textarea>
+        </div>
+        <div>
+            <button><a class="add-link" href="/Ingredients/New">Add Ingredients</a></button>
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</div>

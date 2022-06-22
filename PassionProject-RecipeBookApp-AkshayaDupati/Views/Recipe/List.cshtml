@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PassionProject_RecipeBookApp_AkshayaDupati.Models.Recipe>
+@{
+    ViewBag.Title = "List";
+}
+
+<style>
+    .main{
+        border:1px solid black;
+        padding: 10px;
+        margin: 40px 20px;
+        border-radius: 5px;
+    }
+    .header{
+        text-align: center;
+    }
+    .header{
+        margin-bottom: 10px;
+        background-color: black;
+        color:white;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 40px;
+        width: 50%;
+        margin: auto;
+    }
+    .content{
+        padding: 20px;
+    }
+    ul {
+        text-align: center;
+        list-style-type: none;
+    }
+    li{
+        padding: 10px 0px;
+        margin-right: 20px;
+    }
+    a {
+        color: black;
+    }
+    a:hover{
+        color: black;
+    }
+    button {
+        text-align: center;
+        margin: auto;
+        display: block;
+        background-color: mediumseagreen;
+        padding: 20px 20px;
+        border-radius: 10px;
+    }
+</style>
+<div class="main">
+<h2 class="header">Recipe Book</h2>
+<div class="content">
+    <ul>
+        @foreach (var recipe in Model)
+        {
+            <li><a href="/recipe/details/@recipe.RecipeID">@recipe.RecipeName</a></li>
+        }
+    </ul>
+    <button><a href="/Recipe/New">Add New Recipe</a></button>
+</div>
+
+</div>

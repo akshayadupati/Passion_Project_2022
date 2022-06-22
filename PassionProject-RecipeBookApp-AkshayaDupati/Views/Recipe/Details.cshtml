@@ -1,0 +1,46 @@
+﻿@model PassionProject_RecipeBookApp_AkshayaDupati.Models.Recipe
+@{
+    ViewBag.Title = "Show";
+}
+<style>
+    .back-link {
+        position: relative;
+        top: 10px;
+    }
+    .main {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 40px 20px;
+        border-radius: 5px;
+    }
+    .content-description{
+        padding: 20px 0px;
+        text-align: center;
+    }
+    h3{
+        font-size: 30px;
+    }
+    button {
+        text-align: center;
+        margin: auto;
+        background-color: mediumseagreen;
+        padding: 10px 30px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .edit-link {
+        color: black;
+        padding: 20px 0px;
+        margin: 20px 0px;
+    }
+</style>
+
+<div class="main">
+    <a class="back-link" href="/recipe/list">Go back to the recipe list</a>
+    <div class="content-description">
+        <h3>@Model.RecipeName</h3>
+        <p>@Model.RecipeDescription</p>
+        <button><a class="edit-link" href="/Recipe/Edit/@Model.RecipeID">Edit Recipe</a></button>
+        <button><a class="edit-link" href="/Recipe/DeleteConfirm/@Model.RecipeID">Delete Recipe</a></button>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Add Ingredients";
+}
+
+<style>
+    .main {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 40px 20px;
+        border-radius: 5px;
+    }
+    h2, form, input, label {
+        text-align: center;
+        padding: 10px;
+    }
+    input[type="text"], input[type="submit"] {
+            margin: 0 auto;
+    }
+        input[type="submit"] {
+            margin-top: 10px;
+            background-color: mediumseagreen;
+        }
+`    label, input {
+                display: block;
+     }
+</style>
+<div class="main">
+    <h2>Add Ingredients</h2>
+    <form action="/Ingredients/Create" method="GET">
+        <label>Ingredient Name</label>
+        <input type="text" name="IngredientName" />
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
