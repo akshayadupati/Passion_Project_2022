@@ -56,7 +56,10 @@
     <ul>
         @foreach (var recipe in Model)
         {
+            if (recipe.RecipeID != 0)
+            {
             <li><a href="/recipe/details/@recipe.RecipeID">@recipe.RecipeName</a></li>
+            }
         }
     </ul>
     <button><a href="/Recipe/New">Add New Recipe</a></button>
